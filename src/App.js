@@ -1,8 +1,15 @@
+import DirectoryComp from "./components/DirectoryComp";
+import GalleryComp from "./components/GalleryComp";
+import PhotoComp from "./components/PhotoComp";
+import React from "react";
 
 function App() {
+
   return (
     <div className="App">
-			Sjöööömans
+			<DirectoryComp />
+			<PhotoComp />
+			<GalleryComp />
     </div>
   );
 }
