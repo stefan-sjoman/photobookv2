@@ -1,5 +1,6 @@
 
 import { useSelector, useDispatch } from "react-redux";
+import { Link } from "react-router-dom";
 import { changePhoto } from '../redux/photoSlice';
 
 const GalleryComp = () => {
@@ -12,7 +13,9 @@ const GalleryComp = () => {
 	}
 
 		for (let i = 1; i < directoryObject.numOfPhotos; i++) {
-			photoListJSX.push(<li key={i} onClick={ () => showPhoto(i)} ><img src={ "./photos/" + directoryObject.name + "/" + i + ".jpg" } alt="" /></li>)
+			photoListJSX.push(<Link to="/photo" key={i}>
+			<li onClick={ () => showPhoto(i)} ><img src={ "./photos/" + directoryObject.name + "/" + i + ".jpg" } alt="" /></li>
+			</Link>)
 		}
 
 	return (

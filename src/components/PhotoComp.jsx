@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { changePhoto } from "../redux/photoSlice";
+import { Link } from "react-router-dom";
 
 const PhotoComp = () => {
 	const dispatch = useDispatch();
@@ -34,7 +35,9 @@ const PhotoComp = () => {
 			<img src={ "./photos/" + directoryObject.name + "/" + photoNumber + ".jpg" } alt={ directoryObject.name } />
 			<nav>
 				<button className="nav-left" onClick={ () => navigate(-1) }></button>
-				<button className="to-gallery" onClick={ () => dispatch(changePhoto(1)) }>TILLBAKA</button>
+			  <Link to="/gallery">
+					<button className="to-gallery" onClick={ () => dispatch(changePhoto(1)) }>TILLBAKA</button>
+				</Link>	
 				<button className="nav-right" onClick={ () => navigate(1) }></button>
 			</nav>
 		</section>

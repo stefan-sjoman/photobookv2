@@ -1,21 +1,65 @@
 import { useDispatch } from 'react-redux';
 import { changeDirectory } from '../redux/directorySlice';
-
+import { Link } from "react-router-dom";
 
 const DirectoryComp = () => {
 	const dispatch = useDispatch();
 
 	return (
-		<section className="directory-comp">
+		<nav className="directory-comp">
 			<ul>
 				<li>
-					<button onClick={ () => dispatch(changeDirectory({ name: "agneta",	numOfPhotos: 33	})) }>AGNETA</button>
+					<Link to="/gallery">
+						<button onClick={ () => dispatch(changeDirectory({ name: "agneta",	numOfPhotos: 33	})) }>AGNETA</button>
+					</Link>
 				</li>
 				<li>
-					<button onClick={ () => dispatch(changeDirectory({ name: "barbro", numOfPhotos: 9 })) }>BARBRO</button>
+					<Link to="/gallery">
+						<button onClick={ () => dispatch(changeDirectory({ name: "barbro", numOfPhotos: 9 })) }>BARBRO</button>
+					</Link>
+				</li>
+				<li>
+					<Link to="/gallery">
+						<button onClick={ () => dispatch(changeDirectory({ name: "agneta",	numOfPhotos: 33	})) }>AGNETA</button>
+					</Link>
+				</li>
+				<li>
+					<Link to="/gallery">
+						<button onClick={ () => dispatch(changeDirectory({ name: "barbro", numOfPhotos: 9 })) }>BARBRO</button>
+					</Link>
+				</li>
+				<li>
+					<Link to="/gallery">
+						<button onClick={ () => dispatch(changeDirectory({ name: "agneta",	numOfPhotos: 33	})) }>AGNETA</button>
+					</Link>
+				</li>
+				<li>
+					<Link to="/gallery">
+						<button onClick={ () => dispatch(changeDirectory({ name: "barbro", numOfPhotos: 9 })) }>BARBRO</button>
+					</Link>
+				</li>
+				<li>
+					<Link to="/gallery">
+						<button onClick={ () => dispatch(changeDirectory({ name: "agneta",	numOfPhotos: 33	})) }>AGNETA</button>
+					</Link>
+				</li>
+				<li>
+					<Link to="/gallery">
+						<button onClick={ () => dispatch(changeDirectory({ name: "barbro", numOfPhotos: 9 })) }>BARBRO</button>
+					</Link>
+				</li>
+				<li>
+					<Link to="/gallery">
+						<button onClick={ () => dispatch(changeDirectory({ name: "agneta",	numOfPhotos: 33	})) }>AGNETA</button>
+					</Link>
+				</li>
+				<li>
+					<Link to="/gallery">
+						<button onClick={ () => dispatch(changeDirectory({ name: "barbro", numOfPhotos: 9 })) }>BARBRO</button>
+					</Link>
 				</li>
 			</ul>
-		</section>
+		</nav>
 	);
 }
 
